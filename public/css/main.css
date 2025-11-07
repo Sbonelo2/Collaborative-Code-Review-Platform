@@ -1,27 +1,100 @@
+
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-html,
-body,
-main {
-  width: 100%;
-  height: 100%;
+
+html {
+  scroll-behavior: smooth;
 }
-#root {
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(135deg, #0a192f, #1e2a47);
+  color: #f0f4f8;
+  line-height: 1.6;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
 }
 
+/*  Header Section */
+header {
+  width: 100%;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  padding: 2rem 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+header:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
 
+/*  Image */
+.image-preview {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
 
+.image-preview img {
+  /* width: 80px;
+  height: 80px; */
+  /* border-radius: 50%; */
+  border: 1px solid black;
+  background: #fff;
+  padding: 5px;
+  transition: transform 0.3s ease;
+}
 
+.image-preview img:hover {
+  transform: rotate(10deg) scale(1.1);
+}
 
+/* === Typography === */
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #64ffda;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
 
+p {
+  font-size: 1rem;
+  color: #ccd6f6;
+  text-align: justify;
+  line-height: 1.8;
+}
 
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  body {
+    padding: 1.5rem;
+  }
 
+  header {
+    padding: 1.5rem 1rem;
+  }
 
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .image-preview img {
+    width: 60px;
+    height: 60px;
+  }
+}
