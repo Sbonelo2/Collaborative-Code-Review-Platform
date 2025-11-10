@@ -1,17 +1,23 @@
-
 import { Request, Response } from "express";
 import { createUser } from "../services/authServices";
+import { get } from "http";
+
+
 export const createNewUser = async (req: Request, res: Response) => {
   try {
     const { name, email, password } = req.body;
-    console.log(name, email, password);
+      console.log(name, email, password);
+      
     const user = await createUser({ name, email, password });
     console.log(user);
-    res.status(201).json(user);
+      res.status(201).json(user);
+      
+
   } catch (error) {
     res.status(404).json(error);
   }
 };
+
 
 
 

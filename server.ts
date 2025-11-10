@@ -11,6 +11,8 @@ import authRoutes from "./routes/authRoutes";
 const express = require("express");
 const app: Express = express();
 app.use(express.json());
+
+
 // serve static asset from public
 app.use(express.static(path.join(__dirname, "public")));
 
